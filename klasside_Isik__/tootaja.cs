@@ -8,8 +8,11 @@ namespace klasside_Isik__
 {
     internal class tootaja:isik
     {
-        public tootaja(string asutus, string amet, int tootasu, string eesnimi, int synniAasta, sugu isiksugu) : base(eesnimi, synniAasta, isiksugu)
+        public string asutus;
+        string[] koolinimetus = { "Tallinna Tööstushariduskeskus", "Tallinna Transpordikool", "Tallinna Ehituskool", "Tallinna Teeninduskool" };
+        public tootaja(int asutus, int amet, int tootasu, string eesnimi, int synniAasta, sugu isiksugu) : base(eesnimi, synniAasta, isiksugu)
         {
+            this.asutus = koolinimetus[asutus];
         }
 
         public override void arvutaSissetulek()

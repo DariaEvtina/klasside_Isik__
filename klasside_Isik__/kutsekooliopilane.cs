@@ -8,8 +8,11 @@ namespace klasside_Isik__
 {
     internal class kutsekooliopilane:isik
     {
-        public kutsekooliopilane(string oppeasutus, string eriala, int kursus,int toetus, string eesnimi, int synniAasta, sugu isiksugu) : base(eesnimi, synniAasta, isiksugu)
+        public string oppeasutus;
+        string[] koolinimetus = { "Tallinna Tööstushariduskeskus", "Tallinna Transpordikool", "Tallinna Ehituskool", "Tallinna Teeninduskool"};
+        public kutsekooliopilane(int oppeasutus, int eriala, int kursus,int toetus, string eesnimi, int synniAasta, sugu isiksugu) : base(eesnimi, synniAasta, isiksugu)
         {
+            this.oppeasutus = koolinimetus[oppeasutus];
         }
 
         public override void arvutaSissetulek()
