@@ -8,31 +8,28 @@ namespace klasside_Isik__
 {
     internal class opilane : isik
     {
+        public string spetsialiseerumine;
         public string koolinimi;
+        public string klass;
+        string[] klassinimetus = { "TARpv20", "TARpe20", "LOGpv22", "KRRpv21", "KRRpv20", "KRRpe21", "LOGITpe21" };
         string[] koolinimetus = {"Tallinna Tööstushariduskeskus", "Tallinna Transpordikool" , "Tallinna Ehituskool", "Tallinna Teeninduskool" };
-        public opilane(int koolinimi, int klass, int spetsialiseerumine ,string eesnimi, int synniAasta, sugu isiksugu) : base(eesnimi,  synniAasta,  isiksugu) 
+        string[] erialanimetus = { "tarkvaarendaja", "tööstusinformaatik", "logistika IT-süsteemide nooremspetsialist", "logistik", "rätsep-stilist" };
+        public opilane(int koolinimi, int klass, int spetsialiseerumine ,string eesnimi, int synniAasta, char isiksugu) : base(eesnimi,  synniAasta,  isiksugu) 
         {
             this.koolinimi = koolinimetus[koolinimi];
+            this.spetsialiseerumine = erialanimetus[spetsialiseerumine];
+            this.klass = klassinimetus[klass];
         }
 
-        public override void arvutaSissetulek()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void arvutaVanus()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void muudaNimi()
+        public override void arvutaSissetulek(double maksvaba, double tulumaks)
         {
             throw new NotImplementedException();
         }
 
         public override void print_info()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Eesnimi:" + eesnimi + " Sünniaasta:" + synniAasta + " Eriala:" + spetsialiseerumine +" Koolinimi:"+koolinimi+ " Klass:" + klass + " Sugu:" + isiksugu);
+            
         }
     }
 }

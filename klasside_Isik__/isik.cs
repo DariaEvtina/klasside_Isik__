@@ -10,19 +10,29 @@ namespace klasside_Isik__
     {
         public string eesnimi;
         public int synniAasta;
-        public enum sugu { mees, näine };
-        public sugu isiksugu;
-        public isik() { }
-        public isik(string eesnimi, int synniAasta,sugu isiksugu) 
+        public char isiksugu;
+
+        public isik(string eesnimi="---", int synniAasta=0,char isiksugu ='x') 
         {
             this.eesnimi = eesnimi;
             this.synniAasta = synniAasta;
             this.isiksugu = isiksugu;
         }
+        public isik(isik ob)
+        {
+            this.eesnimi = ob.eesnimi;
+            this.synniAasta = ob.synniAasta;
+            this.isiksugu = ob.isiksugu;
+        }
         public abstract void print_info();
-        public abstract void arvutaVanus();
-        public abstract void muudaNimi();
-        public abstract void arvutaSissetulek();
+        public int arvutaVanus()
+        {
+            int vanus = DateTime.Now.Year - synniAasta;
+            Console.WriteLine($"{vanus} - {vanus-1} aastat vana");
+            return vanus;
+        }
+        public void muudaNimi(string uusnimi) { eesnimi = uusnimi; }
+        public abstract void arvutaSissetulek(double maksvaba,double tulumaks);
 
     }
 }
