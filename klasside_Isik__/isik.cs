@@ -32,7 +32,7 @@ namespace klasside_Isik__
             return vanus;
         }
         public void muudaNimi(string uusnimi) { eesnimi = uusnimi; }
-        public abstract void arvutaSissetulek(double maksvaba,double tulumaks);
+        public abstract double arvutaSissetulek(double maksvaba,double tulumaks);
 
     }
 }

@@ -11,6 +11,7 @@ namespace klasside_Isik__
         public int kursus;
         public string oppeasutus;
         public string eriala;
+        public int toetus;
         string[] koolinimetus = { "Tallinna Tööstushariduskeskus", "Tallinna Transpordikool", "Tallinna Ehituskool", "Tallinna Teeninduskool"};
         string[] erialanimetus = { "tarkvaarendaja", "tööstusinformaatik", "logistika IT-süsteemide nooremspetsialist", "logistik", "rätsep-stilist" };
         public kutsekooliopilane(int oppeasutus, int eriala, int kursus,int toetus, string eesnimi, int synniAasta, char isiksugu) : base(eesnimi, synniAasta, isiksugu)
@@ -18,11 +19,13 @@ namespace klasside_Isik__
             this.oppeasutus = koolinimetus[oppeasutus];
             this.eriala=erialanimetus[eriala];
             this.kursus = kursus;
+            this.toetus=toetus;
         }
 
-        public override void arvutaSissetulek(double maksvaba, double tulumaks)
+        public override double arvutaSissetulek(double maksvaba, double tulumaks)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("sul on ei olnud tootasu");
+            return 0;
         }
 
 

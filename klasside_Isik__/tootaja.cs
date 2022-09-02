@@ -20,9 +20,12 @@ namespace klasside_Isik__
             this.tootasu = tootasu; 
         }
 
-        public override void arvutaSissetulek(double maksvaba, double tulumaks)
+        public override double arvutaSissetulek(double maksvaba, double tulumaks)
         {
-            
+            double SedaTeNae = (tootasu - maksvaba) + (tulumaks / 100);
+            double netpalk = tootasu - SedaTeNae;
+            Console.WriteLine("sul netpalk on: "+netpalk);
+            return netpalk;
         }
 
         public override void print_info()

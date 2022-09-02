@@ -21,9 +21,10 @@ namespace klasside_Isik__
             this.klass = klassinimetus[klass];
         }
 
-        public override void arvutaSissetulek(double maksvaba, double tulumaks)
+        public override double arvutaSissetulek(double maksvaba, double tulumaks)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("sul on ei olnud tootasu");
+            return 0;
         }
 
         public override void print_info()
