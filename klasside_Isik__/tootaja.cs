@@ -22,7 +22,7 @@ namespace klasside_Isik__
 
         public override double arvutaSissetulek(double maksvaba, double tulumaks)
         {
-            double SedaTeNae = (tootasu - maksvaba) + (tulumaks / 100);
+            double SedaTeNae = (tootasu - maksvaba) + (1-tulumaks / 100)+maksvaba;
             double netpalk = tootasu - SedaTeNae;
             Console.WriteLine("sul netpalk on: "+netpalk);
             return netpalk;
